@@ -1,14 +1,29 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AirePro | Instalación, Reparación y Mantención de Aire Acondicionado</title>
-  <meta name="description" content="Expertos en aire acondicionado: instalación, reparación y mantención para hogares y empresas. Respuesta en el día, garantía por escrito y atención en Santiago." />
+  <title>AirePro | Instalación, Reparación y Mantención de Aire Acondicionado en Santiago</title>
+  <meta name="description" content="Expertos en aire acondicionado en Santiago: instalación, reparación y mantención para hogares, oficinas y comercios. Respuesta en el día, garantía por escrito y técnicos certificados." />
+  <link rel="canonical" href="https://tu-dominio.cl/" />
+  <meta name="robots" content="index,follow" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="AirePro" />
+  <meta property="og:title" content="Instalación, reparación y mantención de aire acondicionado en Santiago" />
+  <meta property="og:description" content="Técnicos certificados. Respuesta en el día. Garantía por escrito. Cotiza gratis por WhatsApp." />
+  <meta property="og:url" content="https://tu-dominio.cl/" />
+  <meta property="og:image" content="https://tu-dominio.cl/img/og-airepro.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>❄️</text></svg>">
+
   <style>
     :root{
       --ink:#0b1220; --muted:#5c6b85; --bg:#f7fbff; --p:#115bfd; --p-2:#6aa4ff; --ok:#17b26a; --warn:#f59e0b; --danger:#ef4444; --radius:18px; --max:1200px; --shadow:0 20px 50px rgba(2,6,23,.12)
@@ -17,7 +32,13 @@
     html{scroll-behavior:smooth}
     body{margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--ink); background:#fff}
     a{color:var(--p); text-decoration:none}
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{outline:3px solid #a6c8ff; outline-offset:2px; border-radius:10px}
     .container{max-width:var(--max); margin-inline:auto; padding:0 20px}
+
+    /* Skip link */
+    .skip{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip:focus{left:16px; top:16px; width:auto; height:auto; background:#fff; padding:10px 14px; border-radius:10px; box-shadow:var(--shadow)}
+
     /* Nav */
     header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(8px); background:rgba(255,255,255,.85); border-bottom:1px solid #e9eef6}
     .nav{display:flex; align-items:center; justify-content:space-between; height:68px}
@@ -88,48 +109,69 @@
       .drawer{display:none; position:fixed; inset:68px 0 0 0; background:#fff; padding:20px; border-top:1px solid #e9eef6}
       .drawer ul{list-style:none; margin:0; padding:0; display:grid; gap:12px}
     }
-      /* Media */
+
+    /* Media */
     .thumb{width:100%; height:220px; object-fit:cover; border-radius:16px; box-shadow:var(--shadow); border:1px solid #e9eef6}
     .hero-fig{width:100%; height:280px; object-fit:cover; border-radius:20px; box-shadow:var(--shadow); border:1px solid #e9eef6; margin-bottom:14px}
     .gallery{display:grid; gap:14px; grid-template-columns:repeat(4,1fr)}
     .gallery img{width:100%; height:180px; object-fit:cover; border-radius:14px; box-shadow:var(--shadow); border:1px solid #e9eef6}
     @media (max-width:980px){.gallery{grid-template-columns:repeat(2,1fr)}.gallery img{height:160px}}
   </style>
+
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"HVACBusiness",
     "name":"AirePro",
-    "areaServed":"Santiago",
+    "url":"https://tu-dominio.cl/",
+    "image":"https://tu-dominio.cl/img/og-airepro.jpg",
     "telephone":"+56 9 1234 5678",
-    "openingHours":"Mo-Sa 09:00-19:00",
     "priceRange":"$$",
-    "url":"https://tu-dominio.cl"
+    "areaServed": {"@type":"AdministrativeArea","name":"Santiago"},
+    "address": {"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"},
+    "openingHoursSpecification": [{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"19:00"}]
+  }
+  </script>
+  <!-- FAQ Schema (match section below) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"¿Cuánto cuesta una mantención?","acceptedAnswer":{"@type":"Answer","text":"La limpieza completa por equipo parte desde $XX.XXX e incluye desinfección, medición y un informe técnico."}},
+      {"@type":"Question","name":"¿Atienden el mismo día?","acceptedAnswer":{"@type":"Answer","text":"Sí, disponemos de cupos de emergencia. Escríbenos por WhatsApp para confirmar disponibilidad en tu comuna."}},
+      {"@type":"Question","name":"¿Entregan garantía?","acceptedAnswer":{"@type":"Answer","text":"Todas las intervenciones tienen garantía por escrito. El detalle depende del servicio realizado."}}
+    ]
   }
   </script>
 </head>
 <body>
+  <a class="skip" href="#inicio">Saltar al contenido</a>
+
   <header>
     <div class="container nav">
-      <div class="brand"><div class="brand-badge">❄️</div><span>AirePro</span></div>
-      <nav aria-label="principal">
+      <div class="brand"><div class="brand-badge" aria-hidden="true">❄️</div><span aria-label="AirePro - climatización">AirePro</span></div>
+      <nav aria-label="Navegación principal">
         <ul>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#pasos">Cómo trabajamos</a></li>
           <li><a href="#precios">Precios</a></li>
           <li><a href="#opiniones">Opiniones</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
-      <a class="btn w" href="https://wa.me/56912345678?text=Hola%2C%20necesito%20servicio%20de%20aire%20acondicionado" target="_blank" rel="noopener">WhatsApp</a>
-      <button class="mobile-toggle" aria-label="Abrir menú" onclick="toggleMenu()">☰</button>
+      <a class="btn w" href="https://wa.me/56912345678?text=Hola%2C%20necesito%20servicio%20de%20aire%20acondicionado" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp">WhatsApp</a>
+      <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer" onclick="toggleMenu()">☰</button>
     </div>
-    <div id="drawer" class="drawer container">
+    <div id="drawer" class="drawer container" role="dialog" aria-modal="true" aria-label="Menú móvil">
       <ul>
         <li><a href="#servicios" onclick="toggleMenu()">Servicios</a></li>
         <li><a href="#pasos" onclick="toggleMenu()">Cómo trabajamos</a></li>
         <li><a href="#precios" onclick="toggleMenu()">Precios</a></li>
         <li><a href="#opiniones" onclick="toggleMenu()">Opiniones</a></li>
+        <li><a href="#faq" onclick="toggleMenu()">FAQ</a></li>
         <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
       </ul>
     </div>
@@ -143,31 +185,36 @@
         <p>Atendemos hogares y empresas con técnicos certificados. Mejoramos tu confort y reducimos el consumo eléctrico.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px">
           <a class="btn p" href="#contacto">Solicitar presupuesto</a>
-          <a class="btn" href="tel:+56912345678">Llamar +56 9 1234 5678</a>
+          <a class="btn" href="tel:+56912345678" aria-label="Llamar al +56 9 1234 5678">Llamar +56 9 1234 5678</a>
         </div>
       </div>
       <aside>
-        <img class="hero-fig" src="./img/reparacion-1.jpg" alt="Técnico realizando reparación de aire acondicionado" loading="lazy" />
-        <div class="h-card">
-        <h2 style="margin:0 0 8px">Cotiza en 1 minuto</h2>
-        <p class="sub" style="margin:0 0 12px">Cuéntanos el equipo, la falla y tu comuna.</p>
-        <form onsubmit="return wpp(event)">
-          <label>Tipo de servicio</label>
-          <select id="tipo" required style="width:100%; padding:12px; border:1px solid #3a4f70; border-radius:12px; margin:6px 0 10px; background:#0d2547; color:#e6f1ff">
-            <option>Instalación</option>
-            <option>Reparación</option>
-            <option>Mantención</option>
-          </select>
-          <label>Detalle</label>
-          <input id="detalle" placeholder="Ej: split 12.000 BTU no enfría" required style="width:100%; padding:12px; border:1px solid #3a4f70; border-radius:12px; margin:6px 0 10px; background:#0d2547; color:#e6f1ff" />
-          <label>Comuna</label>
-          <input id="comuna" placeholder="Ej: Ñuñoa" required style="width:100%; padding:12px; border:1px solid #3a4f70; border-radius:12px; margin:6px 0 10px; background:#0d2547; color:#e6f1ff" />
-          <label>Teléfono</label>
-          <input id="fono" type="tel" placeholder="+56 9 ..." required style="width:100%; padding:12px; border:1px solid #3a4f70; border-radius:12px; margin:6px 0 10px; background:#0d2547; color:#e6f1ff" />
-          <button class="btn w" type="submit" style="width:100%">Enviar por WhatsApp</button>
-          <p class="sub" style="font-size:12px; color:#c8dbff">Se abrirá WhatsApp con tu mensaje listo.</p>
-        </form>
-      </div></div>
+        <picture>
+          <source srcset="./img/reparacion-1.webp" type="image/webp" />
+          <img class="hero-fig" src="./img/reparacion-1.jpg" width="960" height="540" alt="Técnico realizando reparación de aire acondicionado" loading="lazy" />
+        </picture>
+        <div class="h-card" role="form" aria-labelledby="cotiza">
+          <h2 id="cotiza" style="margin:0 0 8px">Cotiza en 1 minuto</h2>
+          <p class="sub" style="margin:0 0 12px">Cuéntanos el equipo, la falla y tu comuna.</p>
+          <form onsubmit="return wpp(event)" novalidate>
+            <label for="tipo">Tipo de servicio</label>
+            <select id="tipo" required style="width:100%; padding:12px; border:1px solid #3a4f70; border-radius:12px; margin:6px 0 10px; background:#0d2547; color:#e6f1ff">
+              <option value="Instalación">Instalación</option>
+              <option value="Reparación">Reparación</option>
+              <option value="Mantención">Mantención</option>
+            </select>
+            <label for="detalle">Detalle</label>
+            <input id="detalle" name="detalle" placeholder="Ej: split 12.000 BTU no enfría" required autocomplete="off" style="width:100%; padding:12px; border:1px solid #3a4f70; border-radius:12px; margin:6px 0 10px; background:#0d2547; color:#e6f1ff" />
+            <label for="comuna">Comuna</label>
+            <input id="comuna" name="address-level2" placeholder="Ej: Ñuñoa" required autocomplete="address-level2" style="width:100%; padding:12px; border:1px solid #3a4f70; border-radius:12px; margin:6px 0 10px; background:#0d2547; color:#e6f1ff" />
+            <label for="fono">Teléfono</label>
+            <input id="fono" name="tel" type="tel" inputmode="tel" placeholder="+56 9 1234 5678" pattern="^\+56\s?9\s?\d{4}\s?\d{4}$" required autocomplete="tel" style="width:100%; padding:12px; border:1px solid #3a4f70; border-radius:12px; margin:6px 0 10px; background:#0d2547; color:#e6f1ff" />
+            <button class="btn w" type="submit" style="width:100%">Enviar por WhatsApp</button>
+            <p class="sub" style="font-size:12px; color:#c8dbff">Se abrirá WhatsApp con tu mensaje listo.</p>
+          </form>
+        </div>
+      </aside>
+    </div>
   </main>
 
   <section id="servicios">
@@ -176,7 +223,10 @@
       <p class="sub">Todo lo que necesitas para tu climatización.</p>
       <div class="grid g-3">
         <article class="card">
-          <img class="thumb" src="./img/reparacion-2.jpg" alt="Instalación de unidad interior" loading="lazy">
+          <picture>
+            <source srcset="./img/reparacion-2.webp" type="image/webp" />
+            <img class="thumb" src="./img/reparacion-2.jpg" width="960" height="540" alt="Instalación de unidad interior" loading="lazy">
+          </picture>
           <span class="chip">🧰 Instalación certificada</span>
           <h3>Instalación de equipos</h3>
           <p>Asesoría en BTU, instalación segura de equipos split y multisplit, vacío y pruebas. Entrega con guía de uso.</p>
@@ -187,7 +237,10 @@
           </ul>
         </article>
         <article class="card">
-          <img class="thumb" src="./img/reparacion-1.jpg" alt="Técnico reparando aire acondicionado" loading="lazy">
+          <picture>
+            <source srcset="./img/reparacion-1.webp" type="image/webp" />
+            <img class="thumb" src="./img/reparacion-1.jpg" width="960" height="540" alt="Técnico reparando aire acondicionado" loading="lazy">
+          </picture>
           <span class="chip">🛠️ Reparaciones rápidas</span>
           <h3>Reparación y diagnóstico</h3>
           <p>Detección de fugas, cambio de placas, sensores y capacitores. Carga de gas, calibración y pruebas.</p>
@@ -198,7 +251,10 @@
           </ul>
         </article>
         <article class="card">
-          <img class="thumb" src="./img/aire-ambiente.jpg" alt="Equipo de aire acondicionado en ambiente doméstico" loading="lazy">
+          <picture>
+            <source srcset="./img/aire-ambiente.webp" type="image/webp" />
+            <img class="thumb" src="./img/aire-ambiente.jpg" width="960" height="540" alt="Equipo de aire acondicionado en ambiente doméstico" loading="lazy">
+          </picture>
           <span class="chip">🧼 Mantención preventiva</span>
           <h3>Mantención y limpieza</h3>
           <p>Limpieza de filtros y serpentines, sanitización y desinfección. Reduce consumo y mejora la calidad del aire.</p>
@@ -224,11 +280,23 @@
     <div class="container">
       <h2 class="title">Trabajos recientes</h2>
       <p class="sub">Instalaciones y mantenciones realizadas por nuestro equipo.</p>
-      <div class="gallery">
-        <img src="./img/reparacion-1.jpg" alt="Reparación de unidad interior con destornillador" loading="lazy">
-        <img src="./img/reparacion-2.jpg" alt="Técnico ajustando panel de aire acondicionado" loading="lazy">
-        <img src="./img/reparacion-3.jpg" alt="Detalle de manos realizando ajuste" loading="lazy">
-        <img src="./img/aire-ambiente.jpg" alt="Equipo de aire acondicionado funcionando en living" loading="lazy">
+      <div class="gallery" aria-label="Galería de trabajos recientes">
+        <picture>
+          <source srcset="./img/reparacion-1.webp" type="image/webp" />
+          <img src="./img/reparacion-1.jpg" width="640" height="480" alt="Reparación de unidad interior con destornillador" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="./img/reparacion-2.webp" type="image/webp" />
+          <img src="./img/reparacion-2.jpg" width="640" height="480" alt="Técnico ajustando panel de aire acondicionado" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="./img/reparacion-3.webp" type="image/webp" />
+          <img src="./img/reparacion-3.jpg" width="640" height="480" alt="Detalle de manos realizando ajuste" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="./img/aire-ambiente.webp" type="image/webp" />
+          <img src="./img/aire-ambiente.jpg" width="640" height="480" alt="Equipo de aire acondicionado funcionando en living" loading="lazy">
+        </picture>
       </div>
     </div>
   </section>
@@ -240,9 +308,9 @@
       <div class="grid g-2">
         <div class="card">
           <div class="steps">
-            <div class="step"><div class="dot">1</div><div><strong>Diagnóstico</strong><br><span class="sub">Te contactamos, agendamos y evaluamos tu equipo.</span></div></div>
-            <div class="step"><div class="dot">2</div><div><strong>Intervención</strong><br><span class="sub">Instalamos, reparamos o hacemos la mantención con repuestos de calidad.</span></div></div>
-            <div class="step"><div class="dot">3</div><div><strong>Garantía</strong><br><span class="sub">Pruebas finales, guía de uso y garantía por escrito.</span></div></div>
+            <div class="step"><div class="dot" aria-hidden="true">1</div><div><strong>Diagnóstico</strong><br><span class="sub">Te contactamos, agendamos y evaluamos tu equipo.</span></div></div>
+            <div class="step"><div class="dot" aria-hidden="true">2</div><div><strong>Intervención</strong><br><span class="sub">Instalamos, reparamos o hacemos la mantención con repuestos de calidad.</span></div></div>
+            <div class="step"><div class="dot" aria-hidden="true">3</div><div><strong>Garantía</strong><br><span class="sub">Pruebas finales, guía de uso y garantía por escrito.</span></div></div>
           </div>
         </div>
         <div class="card">
@@ -274,7 +342,7 @@
           <a class="btn p" href="#contacto">Quiero instalar</a>
         </article>
         <article class="card price highlight">
-          <span class="tag">Más solicitado</span>
+          <span class="tag" aria-label="Plan más solicitado">Más solicitado</span>
           <h3>Mantención</h3>
           <p class="sub">Limpieza completa <b>$XX.XXX</b> por equipo</p>
           <ul>
@@ -302,10 +370,30 @@
     <div class="container">
       <h2 class="title">Opiniones de clientes</h2>
       <p class="sub">La mejor referencia es la experiencia real.</p>
-      <div class="testi">
-        <div class="quote"><div class="stars">★★★★★</div><p>Excelente servicio, dejaron el split funcionando perfecto y limpio.</p><strong>— Carla R.</strong></div>
-        <div class="quote"><div class="stars">★★★★★</div><p>Llegaron el mismo día, diagnóstico claro y garantía por escrito.</p><strong>— Luis M.</strong></div>
-        <div class="quote"><div class="stars">★★★★☆</div><p>Buena comunicación y precios justos. Recomendados.</p><strong>— Andrea V.</strong></div>
+      <div class="testi" aria-live="polite">
+        <div class="quote"><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><p>Excelente servicio, dejaron el split funcionando perfecto y limpio.</p><strong>— Carla R.</strong></div>
+        <div class="quote"><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><p>Llegaron el mismo día, diagnóstico claro y garantía por escrito.</p><strong>— Luis M.</strong></div>
+        <div class="quote"><div class="stars" aria-label="4 de 5 estrellas">★★★★☆</div><p>Buena comunicación y precios justos. Recomendados.</p><strong>— Andrea V.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2 class="title">Preguntas frecuentes</h2>
+      <div class="faq">
+        <details>
+          <summary>¿Cuánto cuesta una mantención?</summary>
+          <p>La limpieza completa por equipo parte desde $XX.XXX e incluye desinfección, medición y un informe técnico.</p>
+        </details>
+        <details>
+          <summary>¿Atienden el mismo día?</summary>
+          <p>Sí, disponemos de cupos de emergencia. Escríbenos por WhatsApp para confirmar disponibilidad en tu comuna.</p>
+        </details>
+        <details>
+          <summary>¿Entregan garantía?</summary>
+          <p>Todas las intervenciones tienen garantía por escrito. El detalle depende del servicio realizado.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -315,13 +403,13 @@
       <div>
         <h2 class="title">Contacto</h2>
         <p class="sub">Cuéntanos tu necesidad y te respondemos a la brevedad.</p>
-        <form onsubmit="return mailto(event)" class="card">
-          <label>Nombre</label>
-          <input id="nombre" required placeholder="Tu nombre" style="width:100%; padding:12px; border-radius:12px; border:1px solid #d8e2f0; margin:6px 0 10px"/>
-          <label>Email</label>
-          <input id="email" type="email" required placeholder="tucorreo@ejemplo.com" style="width:100%; padding:12px; border-radius:12px; border:1px solid #d8e2f0; margin:6px 0 10px"/>
-          <label>Mensaje</label>
-          <textarea id="mensaje" rows="4" required placeholder="Modelo, falla, dirección" style="width:100%; padding:12px; border-radius:12px; border:1px solid #d8e2f0; margin:6px 0 10px"></textarea>
+        <form onsubmit="return mailto(event)" class="card" aria-label="Formulario de contacto">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="name" required placeholder="Tu nombre" autocomplete="name" style="width:100%; padding:12px; border-radius:12px; border:1px solid #d8e2f0; margin:6px 0 10px"/>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="tucorreo@ejemplo.com" autocomplete="email" style="width:100%; padding:12px; border-radius:12px; border:1px solid #d8e2f0; margin:6px 0 10px"/>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="message" rows="4" required placeholder="Modelo, falla, dirección" autocomplete="off" style="width:100%; padding:12px; border-radius:12px; border:1px solid #d8e2f0; margin:6px 0 10px"></textarea>
           <div style="display:flex; gap:10px; flex-wrap:wrap">
             <button class="btn p" type="submit">Enviar</button>
             <a id="wplink" class="btn w" target="_blank" rel="noopener">WhatsApp</a>
@@ -329,12 +417,12 @@
           <p class="sub" style="font-size:12px">También al <a href="tel:+56912345678">+56 9 1234 5678</a> o <a href="mailto:contacto@tu-dominio.cl">contacto@tu-dominio.cl</a>.</p>
         </form>
       </div>
-      <aside class="card">
-        <h3>Datos</h3>
+      <aside class="card" aria-labelledby="datos-contacto">
+        <h3 id="datos-contacto">Datos</h3>
         <p><strong>Teléfono:</strong> <a href="tel:+56912345678">+56 9 1234 5678</a></p>
         <p><strong>Email:</strong> <a href="mailto:contacto@tu-dominio.cl">contacto@tu-dominio.cl</a></p>
         <p><strong>Dirección:</strong> Santiago, Chile</p>
-        <iframe title="Mapa" style="width:100%; height:240px; border:0; border-radius:12px" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.024!2d-70.648!3d-33.456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMzPCsDI3JzIyLjIiUyA3MMKwMzknMDEuMyJX!5e0!3m2!1ses-419!2scl!4v1680000000000"></iframe>
+        <iframe title="Mapa a nuestras oficinas en Santiago" style="width:100%; height:240px; border:0; border-radius:12px" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.024!2d-70.648!3d-33.456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMzPCsDI3JzIyLjIiUyA3MMKwMzknMDEuMyJX!5e0!3m2!1ses-419!2scl!4v1680000000000"></iframe>
       </aside>
     </div>
   </section>
@@ -342,23 +430,58 @@
   <footer>
     <div class="container" style="padding:28px 0">
       <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
-        <div style="display:flex; align-items:center; gap:10px"><div class="brand-badge">❄️</div><strong>AirePro</strong></div>
+        <div style="display:flex; align-items:center; gap:10px"><div class="brand-badge" aria-hidden="true">❄️</div><strong>AirePro</strong></div>
         <div style="font-size:14px">© <span id="year"></span> AirePro · Todos los derechos reservados</div>
         <div style="display:flex; gap:10px; font-size:14px"><a href="#">Términos</a><a href="#">Privacidad</a></div>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/56912345678?text=Hola%2C%20necesito%20servicio%20de%20aire%20acondicionado" class="btn w floating" aria-label="WhatsApp">💬 WhatsApp</a>
+  <a href="https://wa.me/56912345678?text=Hola%2C%20necesito%20servicio%20de%20aire%20acondicionado" class="btn w floating" aria-label="Abrir WhatsApp">💬 WhatsApp</a>
 
-  <script>
-    function toggleMenu(){const d=document.getElementById('drawer'); if(!d) return; d.style.display = d.style.display==='block'?'none':'block'}
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function wpp(e){ e.preventDefault(); const t=document.getElementById('tipo').value; const d=document.getElementById('detalle').value.trim(); const c=document.getElementById('comuna').value.trim(); const f=document.getElementById('fono').value.trim(); const msg=encodeURIComponent(`Hola, necesito ${t}. Detalle: ${d}. Comuna: ${c}. Tel: ${f}`); window.open(`https://wa.me/56912345678?text=${msg}`, '_blank'); return false }
-    function mailto(e){ e.preventDefault(); const n=document.getElementById('nombre').value.trim(); const m=document.getElementById('mensaje').value.trim(); const em=document.getElementById('email').value.trim(); const asunto=encodeURIComponent(`Consulta desde la web - ${n}`); const cuerpo=encodeURIComponent(`${m}
-
-Nombre: ${n}
-Email: ${em}`); window.location.href=`mailto:contacto@tu-dominio.cl?subject=${asunto}&body=${cuerpo}`; document.getElementById('wplink').href=`https://wa.me/56912345678?text=${encodeURIComponent(`Hola, soy ${n}. ${m}`)}`; return false }
+  <script defer>
+    function toggleMenu(){
+      const d=document.getElementById('drawer');
+      const b=document.querySelector('.mobile-toggle');
+      if(!d||!b) return;
+      const isOpen = d.style.display==='block';
+      d.style.display = isOpen?'none':'block';
+      b.setAttribute('aria-expanded', String(!isOpen));
+    }
+    // Año dinámico
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const y=document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
+    });
+    // WhatsApp cotización
+    function wpp(e){
+      e.preventDefault();
+      const t=document.getElementById('tipo').value;
+      const d=document.getElementById('detalle').value.trim();
+      const c=document.getElementById('comuna').value.trim();
+      const f=document.getElementById('fono').value.trim();
+      if(!/^\+56\s?9\s?\d{4}\s?\d{4}$/.test(f)){
+        alert('Ingresa un teléfono chileno válido: +56 9 1234 5678');
+        return false;
+      }
+      const msg=encodeURIComponent(`Hola, necesito ${t}. Detalle: ${d}. Comuna: ${c}. Tel: ${f}`);
+      window.open(`https://wa.me/56912345678?text=${msg}`, '_blank', 'noopener');
+      return false;
+    }
+    // Mailto + link de WhatsApp
+    function mailto(e){
+      e.preventDefault();
+      const n=document.getElementById('nombre').value.trim();
+      const m=document.getElementById('mensaje').value.trim();
+      const em=document.getElementById('email').value.trim();
+      const asunto=encodeURIComponent(`Consulta desde la web - ${n}`);
+      const cuerpo=encodeURIComponent(`${m}\n\nNombre: ${n}\nEmail: ${em}`);
+      window.location.href=`mailto:contacto@tu-dominio.cl?subject=${asunto}&body=${cuerpo}`;
+      const wplink=document.getElementById('wplink');
+      if(wplink){
+        wplink.href=`https://wa.me/56912345678?text=${encodeURIComponent(`Hola, soy ${n}. ${m}`)}`;
+      }
+      return false;
+    }
   </script>
 </body>
 </html>
